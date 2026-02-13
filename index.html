@@ -1,0 +1,84 @@
+<!-- will optimized soon -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <link rel="stylesheet" href="./style.css">
+
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <main class="container">
+
+        <div class="start-page">
+            <h1 class="logo">Quiz 🧩</h1>
+
+            <form action="#">
+                <label for="category-select">Category:</label>
+                <select name="category" class="category-select">
+                    <option value="all">All</option>
+                </select>
+
+                <div class="level-container">
+                    <input type="radio" name="level" id="easy">
+                    <label for="easy" class="levels easy-txt">Easy</label>
+
+                    <input type="radio" name="level" id="medium">
+                    <label for="medium" class="levels medium-txt">Medium</label>
+
+                    <input type="radio" name="level" id="hard">
+                    <label for="hard" class="levels hard-txt">Hard</label>
+                </div>
+
+                <button id="start-btn" class="func-btn" disabled>Start</button>
+            </form>
+        </div>
+
+        <div class="qtn-page" style="display:none;">
+            <div class="timer-container">
+                <span class="material-symbols-outlined clock">
+                    timer
+                </span>
+                <span class="time-txt">59</span>
+            </div>
+            <div class="qtn-container">
+                <span class="qtn-no">1. </span>
+                <span class="qtn-txt">In the programming language Java, which of these keywords would you put on a
+                    variable to make sure it doesn&#039;t get modified?</span>
+            </div>
+
+            <div class="option-container">
+                <input type="radio" name="ans" id="option-1">
+                <label for="option-1" data-correct="true">option-1</label>
+
+                <input type="radio" name="ans" id="option-2">
+                <label for="option-2" data-correct="false">option-1</label>
+
+                <input type="radio" name="ans" id="option-3">
+                <label for="option-3" data-correct="false">option-1</label>
+
+                <input type="radio" name="ans" id="option-4">
+                <label for="option-4" data-correct="false">option-1</label>
+            </div>
+
+            <input type="button" value="Next" id="qtn-btn" style="display: none;">
+        </div>
+
+        <div class="score-page" style="display:none">
+            <h2>Your Score</h2>
+            <p class="score-txt">4</p>
+            <button type="reset" id="reset-btn" class="func-btn">Restart Game</button>
+        </div>
+
+    </main>
+</body>
+
+</html>
